@@ -187,7 +187,7 @@ export default function NewHome() {
       }
 
       if (!response.ok) {
-        throw new Error('AI診断に失敗しました');
+        throw new Error('情報の取得に失敗しました');
       }
 
       setDiagnosisState('processing');
@@ -260,7 +260,7 @@ export default function NewHome() {
         const result = await response.json();
 
         if (!result.analysis || result.analysis.trim() === '') {
-          throw new Error('診断結果が生成されませんでした');
+          throw new Error('参考情報が取得できませんでした');
         }
 
         setAnalysisResult(result.analysis);
@@ -275,7 +275,7 @@ export default function NewHome() {
       }
     } catch (err) {
       console.error('Diagnosis error:', err);
-      let errorMessage = '診断中にエラーが発生しました';
+      let errorMessage = '情報取得中にエラーが発生しました';
 
       if (err instanceof Error) {
         if (err.name === 'AbortError') {
@@ -375,8 +375,11 @@ export default function NewHome() {
                     className="w-6 h-6 md:w-8 md:h-8 object-contain"
                   />
                 </div>
-                <p className="text-xs md:text-sm text-white font-bold text-center px-4 mb-6">
-                  過去の株式市場データを分析し、投資判断の参考にご活用ください
+                <p className="text-xs md:text-sm text-white font-bold text-center px-4 mb-2">
+                  過去の株式市場データの参考表示
+                </p>
+                <p className="text-xs text-amber-300 font-bold text-center px-4 mb-6">
+                  ※投資判断はご自身の責任で行ってください
                 </p>
                 <div className="mb-6 flex justify-center">
                   <div className="relative inline-block">
@@ -391,11 +394,11 @@ export default function NewHome() {
                       onClick={runDiagnosis}
                       className="relative font-bold py-3 px-10 rounded-xl text-white transition-all duration-200 hover:translate-y-0.5 active:translate-y-1"
                       style={{
-                        background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%)',
+                        background: 'linear-gradient(135deg, #4A90E2 0%, #357ABD 50%, #4A90E2 100%)',
                         zIndex: 1
                       }}
                     >
-                      今すぐ診断する
+                      参考情報を表示
                     </button>
                   </div>
                 </div>
@@ -419,7 +422,7 @@ export default function NewHome() {
         {diagnosisState === 'error' && (
           <div className="text-center py-12 sm:py-16 md:py-20 px-4">
             <div className="max-w-2xl mx-auto p-5 sm:p-6 md:p-8 bg-white/20 backdrop-blur-sm border border-white/40 rounded-2xl shadow-xl">
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">診断エラー</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">情報取得エラー</h3>
               <p className="text-sm sm:text-base text-white font-semibold mb-5 sm:mb-6">{error}</p>
               <button
                 onClick={() => {

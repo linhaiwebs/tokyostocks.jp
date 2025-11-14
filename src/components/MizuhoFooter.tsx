@@ -21,7 +21,7 @@ export default function MizuhoFooter() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/about" className="hover:text-blue-300 transition-colors">
-                  お知的についで
+                  会社について
                 </Link>
               </li>
               <li>

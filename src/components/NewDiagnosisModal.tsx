@@ -88,7 +88,7 @@ export default function NewDiagnosisModal({
           <div className="relative sticky top-0 bg-cyan-gradient px-3 py-2 flex items-center justify-between border-b-3 border-mizuho-cyan-dark backdrop-blur-sm z-10 shadow-lg">
           <div className="flex-1 text-center pr-6">
             <h2 className="text-sm sm:text-base font-bold text-white drop-shadow-lg font-artistic">
-              {stockName}（{stockCode}）AI分析レポート
+              {stockName}（{stockCode}）参考情報
             </h2>
           </div>
           <button
@@ -102,8 +102,17 @@ export default function NewDiagnosisModal({
 
         <div className="relative overflow-y-auto max-h-[calc(90vh-100px)] px-3 py-2 sm:px-4 sm:py-3 space-y-2 bg-gradient-to-br from-blue-50 to-cyan-50">
 
+          <div className="bg-red-50 border-2 border-red-400 rounded-lg p-3 mb-3">
+            <p className="text-xs sm:text-sm text-red-800 font-bold text-center leading-relaxed">
+              ⚠️ 重要なお知らせ
+            </p>
+            <p className="text-[10px] sm:text-xs text-red-700 font-semibold text-center mt-1">
+              本情報は参考資料であり、投資助言・推奨ではありません。<br />
+              投資判断は必ずご自身の責任で行ってください。
+            </p>
+          </div>
           <p className="text-[10px] sm:text-xs text-center text-gray-600 mb-2">
-            データ: 公開市場情報 | 参考資料（投資助言ではありません）
+            データ出典: 公開市場情報（準リアルタイム）
           </p>
 
           <div className="relative bg-white/80 backdrop-blur-xl rounded-lg p-3 sm:p-4 border-2 border-mizuho-cyan/30 overflow-hidden shadow-xl">
@@ -115,7 +124,7 @@ export default function NewDiagnosisModal({
                 <div className="text-xs sm:text-sm text-gray-700 leading-relaxed space-y-1">
                   {isConnecting ? (
                     <div className="text-center py-4">
-                      <p className="text-mizuho-cyan font-bold text-sm">市場データ分析中...</p>
+                      <p className="text-mizuho-cyan font-bold text-sm">市場データ読み込み中...</p>
                     </div>
                   ) : (
                     <>
@@ -164,12 +173,12 @@ export default function NewDiagnosisModal({
                     />
 
                     <ExternalLink className="relative w-4 h-4 animate-icon-bounce drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]" />
-                    <span className="relative drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4), 0 0 8px rgba(255,255,255,0.3)' }}>LINEで分析情報受取</span>
+                    <span className="relative drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4), 0 0 8px rgba(255,255,255,0.3)' }}>LINEで情報を受け取る</span>
                   </button>
 
-                  <div className="mt-2 p-2 bg-gradient-to-r from-mizuho-blue/20 to-mizuho-cyan/20 rounded-lg border border-mizuho-cyan/30">
-                    <p className="text-[10px] sm:text-xs text-mizuho-blue leading-relaxed">
-                      LINE登録で参考情報として市場分析レポートをお届け※投資助言ではありません
+                  <div className="mt-2 p-2 bg-amber-50 rounded-lg border border-amber-300">
+                    <p className="text-[10px] sm:text-xs text-amber-800 font-semibold leading-relaxed">
+                      ※LINEで参考情報をお届けします。本情報は投資助言・推奨ではありません。
                     </p>
                   </div>
                 </>

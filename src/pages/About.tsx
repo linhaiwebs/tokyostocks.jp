@@ -23,14 +23,21 @@ export default function About() {
 
           <div className="prose max-w-none">
             <section className="mb-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">AI株式診断サービスについて</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-4">株式市場情報参照サービスについて</h2>
+              <div className="bg-amber-50 border-l-4 border-amber-500 p-4 mb-4">
+                <p className="text-amber-900 font-bold mb-2">重要なお知らせ</p>
+                <p className="text-gray-800 leading-relaxed text-sm">
+                  本サービスは<strong>参考情報の表示のみを目的</strong>とした情報参照ツールです。
+                  <strong className="text-red-700">投資助言・推奨を行うものではありません。</strong>
+                </p>
+              </div>
               <p className="text-gray-700 leading-relaxed mb-3">
-                AI株式診断サービスは、最新のAI技術を活用して株式市場の情報を分析し、
-                投資家の皆様に有益な情報を提供することを目的としたサービスです。
+                本サービスは、AI技術を活用して株式市場の公開データを表示し、
+                参考情報として提供することを目的としています。
               </p>
               <p className="text-gray-700 leading-relaxed">
-                私たちは、テクノロジーの力で投資情報の民主化を実現し、
-                より多くの方々が適切な情報に基づいて投資判断を行える環境を提供することを目指しています。
+                私たちは、テクノロジーの力で市場情報へのアクセスを民主化し、
+                より多くの方々が公開情報に基づいて自己責任で投資判断を行える環境を提供することを目指しています。
               </p>
             </section>
 
@@ -41,11 +48,11 @@ export default function About() {
               </div>
               <div className="bg-pale-green rounded-lg p-6">
                 <p className="text-gray-800 font-semibold mb-3">
-                  「AI技術で投資情報をもっと身近に、もっと分かりやすく」
+                  「AI技術で市場情報をもっと身近に、もっと分かりやすく」
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  私たちは、複雑な株式市場の情報をAI技術により分かりやすく分析し、
-                  投資家の皆様がより良い投資判断を行えるよう支援することを使命としています。
+                  私たちは、複雑な株式市場の公開データをAI技術により分かりやすく表示し、
+                  参考情報として提供することを使命としています。
                 </p>
               </div>
             </section>
@@ -57,10 +64,10 @@ export default function About() {
               </div>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-gradient-to-br from-pale-green to-green-100 rounded-lg p-4 border border-primary-green/30">
-                  <h3 className="font-bold text-gray-900 mb-2">AI分析技術</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">AI情報表示</h3>
                   <p className="text-sm text-gray-700 leading-relaxed">
-                    最新の機械学習アルゴリズムを使用し、
-                    大量の市場データから有用な情報を抽出します。
+                    AI技術を使用し、
+                    大量の公開市場データを参考情報として表示します。
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg p-4 border border-accent-emerald/30">
@@ -71,10 +78,10 @@ export default function About() {
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 border border-success-green/30">
-                  <h3 className="font-bold text-gray-900 mb-2">準リアルタイム</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">準リアルタイムデータ</h3>
                   <p className="text-sm text-gray-700 leading-relaxed">
-                    市場データを準リアルタイムで更新し、
-                    常に最新の情報を提供します。
+                    公開市場データを準リアルタイムで表示します。
+                    （数分遅延の可能性があります）
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-4 border border-teal-400/30">

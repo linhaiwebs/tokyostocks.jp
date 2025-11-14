@@ -39,7 +39,7 @@ export default function NewHeader() {
 
         <div className="flex flex-col items-center">
           <h2 className="text-2xl md:text-4xl font-black text-white tracking-tight text-center">
-            銘柄無料診断
+            銘柄情報参照
           </h2>
           <div
             className="mt-2 text-sm md:text-base font-medium italic text-center"
@@ -49,7 +49,10 @@ export default function NewHeader() {
               transform: 'skewY(-2deg)'
             }}
           >
-            「Artificial Intelligence」
+            「参考情報提供ツール」
+          </div>
+          <div className="mt-3 text-xs text-amber-300 font-bold text-center px-4">
+            ※本サービスは投資助言ではありません
           </div>
         </div>
       </div>

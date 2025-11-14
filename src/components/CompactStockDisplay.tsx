@@ -129,14 +129,17 @@ export default function CompactStockDisplay({ info, latestPrice, onAnalyze }: Co
               onClick={onAnalyze}
               className="relative w-full font-bold py-3 px-6 rounded-xl text-white transition-all duration-200 hover:translate-y-0.5 active:translate-y-1"
               style={{
-                background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%)',
+                background: 'linear-gradient(135deg, #4A90E2 0%, #357ABD 50%, #4A90E2 100%)',
                 zIndex: 1
               }}
             >
-              今すぐ分析する
+              参考情報を表示
             </button>
           </div>
-          <p className="text-center mt-3 text-xs text-white/70 font-light">
+          <p className="text-center mt-2 text-xs text-amber-300 font-bold">
+            ※本情報は参考資料であり投資助言ではありません
+          </p>
+          <p className="text-center mt-1 text-xs text-white/70 font-light">
             データのセキュリティは厳重に保護されています
           </p>
         </div>
