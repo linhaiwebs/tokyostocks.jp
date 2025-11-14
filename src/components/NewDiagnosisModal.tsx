@@ -102,17 +102,8 @@ export default function NewDiagnosisModal({
 
         <div className="relative overflow-y-auto max-h-[calc(90vh-100px)] px-3 py-2 sm:px-4 sm:py-3 space-y-2 bg-gradient-to-br from-blue-50 to-cyan-50">
 
-          <div className="bg-red-50 border-2 border-red-400 rounded-lg p-3 mb-3">
-            <p className="text-xs sm:text-sm text-red-800 font-bold text-center leading-relaxed">
-              ⚠️ 重要なお知らせ
-            </p>
-            <p className="text-[10px] sm:text-xs text-red-700 font-semibold text-center mt-1">
-              本情報は参考資料であり、投資助言・推奨ではありません。<br />
-              投資判断は必ずご自身の責任で行ってください。
-            </p>
-          </div>
           <p className="text-[10px] sm:text-xs text-center text-gray-600 mb-2">
-            データ出典: 公開市場情報（準リアルタイム）
+            データ出典: 公開市場情報（準リアルタイム）| 参考資料（投資助言ではありません）
           </p>
 
           <div className="relative bg-white/80 backdrop-blur-xl rounded-lg p-3 sm:p-4 border-2 border-mizuho-cyan/30 overflow-hidden shadow-xl">
